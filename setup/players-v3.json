@@ -1,0 +1,112 @@
+{
+    "players": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "mytype": {
+                        "S": "player"
+                    },
+                    "myposition": {
+                        "S": "defender"
+                    },
+                    "playerId": {
+                        "S": "47"
+                    },
+                    "fullname": {
+                        "S": "David Alaba"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "mytype": {
+                        "S": "player"
+                    },
+                    "myposition": {
+                        "S": "defender"
+                    },
+                    "playerId": {
+                        "S": "48"
+                    },
+                    "fullname": {
+                        "S": "Jordi Alba"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "mytype": {
+                        "S": "player"
+                    },
+                    "myposition": {
+                        "S": "defender"
+                    },
+                    "playerId": {
+                        "S": "49"
+                    },
+                    "fullname": {
+                        "S": "Samuel Umtiti"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "mytype": {
+                        "S": "player"
+                    },
+                    "myposition": {
+                        "S": "defender"
+                    },
+                    "playerId": {
+                        "S": "50"
+                    },
+                    "fullname": {
+                        "S": "Antonio Valencia"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "mytype": {
+                        "S": "player"
+                    },
+                    "myposition": {
+                        "S": "defender"
+                    },
+                    "playerId": {
+                        "S": "51"
+                    },
+                    "fullname": {
+                        "S": "Jérôme Boateng"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "mytype": {
+                        "S": "player"
+                    },
+                    "myposition": {
+                        "S": "forward"
+                    },
+                    "playerId": {
+                        "S": "52"
+                    },
+                    "fullname": {
+                        "S": "Paulo Dybala"
+                    }
+                }
+            }
+        }
+    ]
+}

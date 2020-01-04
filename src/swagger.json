@@ -1,0 +1,1239 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Soccer Players API",
+    "description": "Tiny RESTful API using Node.js: allows you to manage soccer players.",
+    "contact": {
+        "name": "Mauro Bonfietti",
+        "url": "https://github.com/maurobonfietti"
+    },
+    "version": "1.0"
+  },
+  "paths": {
+    "/": {
+      "get": {
+        "tags": [
+          "Info"
+        ],
+        "summary": "Get help",
+        "description": "Get help about this API.",
+        "operationId": "Gethelp",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {
+              "X-Powered-By": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "Express"
+                  }
+                }
+              },
+              "Access-Control-Allow-Origin": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "*"
+                  }
+                }
+              },
+              "Content-Length": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "43"
+                  }
+                }
+              },
+              "ETag": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "W/\"2b-h6BMmxGhWkCo5dA5bJgq/pDo3sQ\""
+                  }
+                }
+              },
+              "Date": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "Mon, 23 Dec 2019 21:03:20 GMT"
+                  }
+                }
+              },
+              "Connection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "keep-alive"
+                  }
+                }
+              }
+            },
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Gethelp"
+                },
+                "example": {
+                  "message": "Welcome to Soccer Player API!"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/status": {
+      "get": {
+        "tags": [
+          "Info"
+        ],
+        "summary": "Health check",
+        "description": "Get status of this API.",
+        "operationId": "Healthcheck",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {
+              "X-Powered-By": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "Express"
+                  }
+                }
+              },
+              "Access-Control-Allow-Origin": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "*"
+                  }
+                }
+              },
+              "Content-Length": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "62"
+                  }
+                }
+              },
+              "ETag": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "W/\"3e-r8UILbmoe9Rk/g5iPSk00uuUUuk\""
+                  }
+                }
+              },
+              "Date": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "Mon, 23 Dec 2019 21:03:27 GMT"
+                  }
+                }
+              },
+              "Connection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "keep-alive"
+                  }
+                }
+              }
+            },
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Healthcheck"
+                },
+                "example": {
+                  "status": "ok",
+                  "api": "soccer-player-api",
+                  "time": 1577135007891
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/v1/players": {
+      "get": {
+        "tags": [
+          "Players"
+        ],
+        "summary": "Get players",
+        "description": "Get all players.",
+        "operationId": "Getplayers",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "*"
+                  }
+                }
+              },
+              "Content-Length": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "3649"
+                  }
+                }
+              },
+              "ETag": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "W/\"e41-UWRq8XsdgY2aB6uBEotcHTXPL6w\""
+                  }
+                }
+              },
+              "Date": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "Thu, 26 Dec 2019 02:45:05 GMT"
+                  }
+                }
+              },
+              "Connection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "keep-alive"
+                  }
+                }
+              }
+            },
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Getplayer"
+                  }
+                },
+                "example": [
+                  {
+                    "myposition": "forward",
+                    "fullname": "Carlos Tevez",
+                    "playerId": "1"
+                  },
+                  {
+                    "myposition": "defender",
+                    "fullname": "Matthijs de Ligt",
+                    "playerId": "10"
+                  },
+                  {
+                    "myposition": "midfielder",
+                    "fullname": "Frenkie de Jong",
+                    "playerId": "11"
+                  },
+                  {
+                    "myposition": "defender",
+                    "fullname": "Virgil van Dijk",
+                    "playerId": "12"
+                  },
+                  {
+                    "myposition": "midfielder",
+                    "fullname": "Sergio Busquets",
+                    "playerId": "13"
+                  },
+                  {
+                    "myposition": "midfielder",
+                    "fullname": "Eden Hazard",
+                    "playerId": "14"
+                  },
+                  {
+                    "myposition": "midfielder",
+                    "fullname": "Paul Pogba",
+                    "playerId": "15"
+                  },
+                  {
+                    "myposition": "midfielder",
+                    "fullname": "Kevin De Bruyne",
+                    "playerId": "16"
+                  },
+                  {
+                    "myposition": "forward",
+                    "fullname": "Sergio Agüero",
+                    "playerId": "17"
+                  },
+                  {
+                    "myposition": "goalkeeper",
+                    "fullname": "Thibaut Courtois",
+                    "playerId": "18"
+                  },
+                  {
+                    "myposition": "goalkeeper",
+                    "fullname": "Manuel Neuer",
+                    "playerId": "19"
+                  },
+                  {
+                    "myposition": "forward",
+                    "fullname": "Lionel Messi",
+                    "playerId": "2"
+                  },
+                  {
+                    "myposition": "goalkeeper",
+                    "fullname": "Guillermo Ochoa",
+                    "playerId": "20"
+                  },
+                  {
+                    "myposition": "goalkeeper",
+                    "fullname": "Hugo Lloris",
+                    "playerId": "21"
+                  },
+                  {
+                    "myposition": "goalkeeper",
+                    "fullname": "David de Gea",
+                    "playerId": "22"
+                  },
+                  {
+                    "myposition": "goalkeeper",
+                    "fullname": "Esteban Andrada",
+                    "playerId": "23"
+                  },
+                  {
+                    "myposition": "defender",
+                    "fullname": "Gerard Piqué",
+                    "playerId": "24"
+                  },
+                  {
+                    "myposition": "defender",
+                    "fullname": "Trent Alexander-Arnold",
+                    "playerId": "25"
+                  },
+                  {
+                    "myposition": "midfielder",
+                    "fullname": "Moussa Sissoko",
+                    "playerId": "26"
+                  },
+                  {
+                    "myposition": "midfielder",
+                    "fullname": "Tanguy Ndombélé",
+                    "playerId": "27"
+                  },
+                  {
+                    "myposition": "forward",
+                    "fullname": "Raheem Sterling",
+                    "playerId": "28"
+                  },
+                  {
+                    "myposition": "forward",
+                    "fullname": "Lucas Moura",
+                    "playerId": "29"
+                  },
+                  {
+                    "myposition": "forward",
+                    "fullname": "Cristiano Ronaldo",
+                    "playerId": "3"
+                  },
+                  {
+                    "myposition": "forward",
+                    "fullname": "Kylian Mbappé",
+                    "playerId": "30"
+                  },
+                  {
+                    "myposition": "defender",
+                    "fullname": "Raphaël Varane",
+                    "playerId": "31"
+                  },
+                  {
+                    "myposition": "defender",
+                    "fullname": "Nicolás Otamendi",
+                    "playerId": "32"
+                  },
+                  {
+                    "myposition": "defender",
+                    "fullname": "Benjamin Pavard",
+                    "playerId": "33"
+                  },
+                  {
+                    "myposition": "forward",
+                    "fullname": "Sadio Mané",
+                    "playerId": "34"
+                  },
+                  {
+                    "myposition": "forward",
+                    "fullname": "Harry Kane",
+                    "playerId": "35"
+                  },
+                  {
+                    "myposition": "forward",
+                    "fullname": "Mohamed Salah",
+                    "playerId": "36"
+                  },
+                  {
+                    "myposition": "goalkeeper",
+                    "fullname": "Alisson Becker",
+                    "playerId": "37"
+                  },
+                  {
+                    "myposition": "goalkeeper",
+                    "fullname": "Marc-André ter Stegen",
+                    "playerId": "38"
+                  },
+                  {
+                    "myposition": "goalkeeper",
+                    "fullname": "Ederson Moraes",
+                    "playerId": "39"
+                  },
+                  {
+                    "myposition": "midfielder",
+                    "fullname": "Luka Modrić",
+                    "playerId": "4"
+                  },
+                  {
+                    "myposition": "defender",
+                    "fullname": "Sergio Ramos",
+                    "playerId": "40"
+                  },
+                  {
+                    "myposition": "defender",
+                    "fullname": "Marcelo Vieira",
+                    "playerId": "41"
+                  },
+                  {
+                    "myposition": "midfielder",
+                    "fullname": "Daniele De Rossi",
+                    "playerId": "42"
+                  },
+                  {
+                    "myposition": "midfielder",
+                    "fullname": "N'Golo Kanté",
+                    "playerId": "43"
+                  },
+                  {
+                    "myposition": "midfielder",
+                    "fullname": "Toni Kroos",
+                    "playerId": "44"
+                  },
+                  {
+                    "myposition": "midfielder",
+                    "fullname": "Andrés Iniesta",
+                    "playerId": "45"
+                  },
+                  {
+                    "myposition": "defender",
+                    "fullname": "Leonardo Bonucci",
+                    "playerId": "46"
+                  },
+                  {
+                    "myposition": "defender",
+                    "fullname": "David Alaba",
+                    "playerId": "47"
+                  },
+                  {
+                    "myposition": "defender",
+                    "fullname": "Jordi Alba",
+                    "playerId": "48"
+                  },
+                  {
+                    "myposition": "defender",
+                    "fullname": "Samuel Umtiti",
+                    "playerId": "49"
+                  },
+                  {
+                    "myposition": "forward",
+                    "fullname": "Luis Suarez",
+                    "playerId": "5"
+                  },
+                  {
+                    "myposition": "defender",
+                    "fullname": "Antonio Valencia",
+                    "playerId": "50"
+                  },
+                  {
+                    "myposition": "defender",
+                    "fullname": "Jérôme Boateng",
+                    "playerId": "51"
+                  },
+                  {
+                    "myposition": "forward",
+                    "fullname": "Paulo Dybala",
+                    "playerId": "52"
+                  },
+                  {
+                    "myposition": "forward",
+                    "fullname": "Antoine Griezmann",
+                    "playerId": "6"
+                  },
+                  {
+                    "myposition": "midfielder",
+                    "fullname": "James Rodriguez",
+                    "playerId": "7"
+                  },
+                  {
+                    "myposition": "forward",
+                    "fullname": "Neymar",
+                    "playerId": "8"
+                  },
+                  {
+                    "myposition": "defender",
+                    "fullname": "Dani Alves",
+                    "playerId": "9"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "post": {
+        "tags": [
+          "Players"
+        ],
+        "summary": "Post player",
+        "description": "Create a player.",
+        "operationId": "Postplayer",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostplayerRequest"
+              },
+              "example": {
+                "playerId": "100",
+                "myposition": "goalkeeper",
+                "fullname": "{{$randomFullName}}"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "",
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "*"
+                  }
+                }
+              },
+              "Content-Length": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "29"
+                  }
+                }
+              },
+              "ETag": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "W/\"1d-+J/PCkRqsEs691FhA9yqJIzz50M\""
+                  }
+                }
+              },
+              "Date": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "Thu, 26 Dec 2019 02:45:22 GMT"
+                  }
+                }
+              },
+              "Connection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "keep-alive"
+                  }
+                }
+              }
+            },
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Postplayer"
+                },
+                "example": {
+                  "message": "Player created."
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/v1/players/{playerId}": {
+      "get": {
+        "tags": [
+          "Players"
+        ],
+        "summary": "Get one player",
+        "description": "Get one player.",
+        "operationId": "Getoneplayer",
+        "parameters": [
+          {
+            "name": "playerId",
+            "in": "path",
+            "description": "The Player ID",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "*"
+                  }
+                }
+              },
+              "Content-Length": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "67"
+                  }
+                }
+              },
+              "ETag": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "W/\"43-VN/yW16slSmftfDmPi6L+bOOnrY\""
+                  }
+                }
+              },
+              "Date": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "Thu, 26 Dec 2019 02:45:56 GMT"
+                  }
+                }
+              },
+              "Connection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "keep-alive"
+                  }
+                }
+              }
+            },
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Getoneplayer"
+                  }
+                },
+                "example": [
+                  {
+                    "myposition": "forward",
+                    "fullname": "Lionel Messi",
+                    "playerId": "2"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "patch": {
+        "tags": [
+          "Players"
+        ],
+        "summary": "Update player",
+        "description": "Update a player.",
+        "operationId": "Updateplayer",
+        "parameters": [
+          {
+            "name": "playerId",
+            "in": "path",
+            "description": "The Player ID",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateplayerRequest"
+              },
+              "example": {
+                "myposition": "forward",
+                "fullname": "{{$randomFullName}}"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "*"
+                  }
+                }
+              },
+              "Content-Length": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "29"
+                  }
+                }
+              },
+              "ETag": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "W/\"1d-0TK7dvCtIV2ofSeBvK5eVoxYrtI\""
+                  }
+                }
+              },
+              "Date": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "Thu, 26 Dec 2019 02:31:17 GMT"
+                  }
+                }
+              },
+              "Connection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "keep-alive"
+                  }
+                }
+              }
+            },
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "$ref": "#/components/schemas/Updateplayer"
+                },
+                "example": {
+                  "message": "Player updated."
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      },
+      "delete": {
+        "tags": [
+          "Players"
+        ],
+        "summary": "Delete player",
+        "description": "Delete a player.",
+        "operationId": "Deleteplayer",
+        "parameters": [
+          {
+            "name": "playerId",
+            "in": "path",
+            "description": "The Player ID",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "",
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "*"
+                  }
+                }
+              },
+              "ETag": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "W/\"2-vyGp6PvFo4RvsFtPoIWeCReyIC8\""
+                  }
+                }
+              },
+              "Date": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "Thu, 26 Dec 2019 02:46:55 GMT"
+                  }
+                }
+              },
+              "Connection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "keep-alive"
+                  }
+                }
+              }
+            },
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/v1/players/dream-team": {
+      "get": {
+        "tags": [
+          "Players"
+        ],
+        "summary": "Get dream team",
+        "description": "Get dream team.",
+        "operationId": "Getdreamteam",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "*"
+                  }
+                }
+              },
+              "Content-Length": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "614"
+                  }
+                }
+              },
+              "ETag": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "W/\"266-tVEvs9sbgFOZ45/ewtXlx+I9/t4\""
+                  }
+                }
+              },
+              "Date": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "Mon, 23 Dec 2019 21:04:29 GMT"
+                  }
+                }
+              },
+              "Connection": {
+                "content": {
+                  "text/plain": {
+                    "schema": {
+                      "type": "string"
+                    },
+                    "example": "keep-alive"
+                  }
+                }
+              }
+            },
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Getdreamteam"
+                    }
+                  }
+                },
+                "example": [
+                  [
+                    {
+                      "myposition": "goalkeeper",
+                      "fullname": "Thibaut Courtois"
+                    }
+                  ],
+                  [
+                    {
+                      "myposition": "defender",
+                      "fullname": "Benjamin Pavard"
+                    },
+                    {
+                      "myposition": "defender",
+                      "fullname": "Gerard Piqué"
+                    },
+                    {
+                      "myposition": "defender",
+                      "fullname": "Trent Alexander-Arnold"
+                    },
+                    {
+                      "myposition": "defender",
+                      "fullname": "Leonardo Bonucci"
+                    }
+                  ],
+                  [
+                    {
+                      "myposition": "midfielder",
+                      "fullname": "Luka Modrić"
+                    },
+                    {
+                      "myposition": "midfielder",
+                      "fullname": "Sergio Busquets"
+                    },
+                    {
+                      "myposition": "midfielder",
+                      "fullname": "N'Golo Kanté"
+                    }
+                  ],
+                  [
+                    {
+                      "myposition": "forward",
+                      "fullname": "Sergio Agüero"
+                    },
+                    {
+                      "myposition": "forward",
+                      "fullname": "Carlos Tevez"
+                    },
+                    {
+                      "myposition": "forward",
+                      "fullname": "Lionel Messi"
+                    }
+                  ]
+                ]
+              }
+            }
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Gethelp": {
+        "title": "Gethelp",
+        "required": [
+          "message"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "message": "Welcome to Soccer Player API!"
+        }
+      },
+      "Healthcheck": {
+        "title": "Healthcheck",
+        "required": [
+          "status",
+          "api",
+          "time"
+        ],
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "api": {
+            "type": "string"
+          },
+          "time": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "example": {
+          "status": "ok",
+          "api": "soccer-player-api",
+          "time": 1577135007891
+        }
+      },
+      "Getplayer": {
+        "title": "Getplayer",
+        "required": [
+          "myposition",
+          "fullname",
+          "playerId"
+        ],
+        "type": "object",
+        "properties": {
+          "myposition": {
+            "type": "string"
+          },
+          "fullname": {
+            "type": "string"
+          },
+          "playerId": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "myposition": "forward",
+          "fullname": "Carlos Tevez",
+          "playerId": "1"
+        }
+      },
+      "Getoneplayer": {
+        "title": "Getoneplayer",
+        "required": [
+          "myposition",
+          "fullname",
+          "playerId"
+        ],
+        "type": "object",
+        "properties": {
+          "myposition": {
+            "type": "string"
+          },
+          "fullname": {
+            "type": "string"
+          },
+          "playerId": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "myposition": "forward",
+          "fullname": "Lionel Messi",
+          "playerId": "2"
+        }
+      },
+      "PostplayerRequest": {
+        "title": "PostplayerRequest",
+        "required": [
+          "playerId",
+          "myposition",
+          "fullname"
+        ],
+        "type": "object",
+        "properties": {
+          "playerId": {
+            "type": "string"
+          },
+          "myposition": {
+            "type": "string"
+          },
+          "fullname": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "playerId": "100",
+          "myposition": "goalkeeper",
+          "fullname": "{{$randomFullName}}"
+        }
+      },
+      "Postplayer": {
+        "title": "Postplayer",
+        "required": [
+          "message"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "message": "Player created."
+        }
+      },
+      "UpdateplayerRequest": {
+        "title": "UpdateplayerRequest",
+        "required": [
+          "myposition",
+          "fullname"
+        ],
+        "type": "object",
+        "properties": {
+          "myposition": {
+            "type": "string"
+          },
+          "fullname": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "myposition": "forward",
+          "fullname": "{{$randomFullName}}"
+        }
+      },
+      "Updateplayer": {
+        "title": "Updateplayer",
+        "required": [
+          "message"
+        ],
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "message": "Player updated."
+        }
+      },
+      "Getdreamteam": {
+        "title": "Getdreamteam",
+        "required": [
+          "myposition",
+          "fullname"
+        ],
+        "type": "object",
+        "properties": {
+          "myposition": {
+            "type": "string"
+          },
+          "fullname": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "myposition": "goalkeeper",
+          "fullname": "Thibaut Courtois"
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Info",
+      "description": "Endpoints to get info about the API."
+    },
+    {
+      "name": "Players",
+      "description": "Endpoints to get and manage soccer players."
+    }
+  ]
+}

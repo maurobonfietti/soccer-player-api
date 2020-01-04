@@ -1,0 +1,26 @@
+{
+    "name": "soccer-player-api",
+    "version": "1.0.0",
+    "description": "Tiny RESTful API using Node.js: allows you to manage soccer players.",
+    "author": "Mauro Bonfietti",
+    "license": "MIT",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "node src/index.js",
+        "local": "nodemon --inspect=0.0.0.0:9229 src/index.js",
+        "test": "jest --coverage"
+    },
+    "devDependencies": {
+        "jest": "^24.9.0",
+        "nodemon": "^2.0.1",
+        "supertest": "^4.0.2"
+    },
+    "dependencies": {
+        "aws-sdk": "^2.580.0",
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "swagger-ui-express": "^4.1.2",
+        "xid-js": "^1.0.1"
+    }
+}

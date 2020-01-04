@@ -1,0 +1,418 @@
+{
+    "players": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "mytype": {
+                        "S": "player"
+                    },
+                    "myposition": {
+                        "S": "forward"
+                    },
+                    "playerId": {
+                        "S": "1"
+                    },
+                    "fullname": {
+                        "S": "Carlos Tevez"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "mytype": {
+                        "S": "player"
+                    },
+                    "myposition": {
+                        "S": "forward"
+                    },
+                    "playerId": {
+                        "S": "2"
+                    },
+                    "fullname": {
+                        "S": "Lionel Messi"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "mytype": {
+                        "S": "player"
+                    },
+                    "myposition": {
+                        "S": "forward"
+                    },
+                    "playerId": {
+                        "S": "3"
+                    },
+                    "fullname": {
+                        "S": "Cristiano Ronaldo"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "mytype": {
+                        "S": "player"
+                    },
+                    "myposition": {
+                        "S": "midfielder"
+                    },
+                    "playerId": {
+                        "S": "4"
+                    },
+                    "fullname": {
+                        "S": "Luka Modrić"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "mytype": {
+                        "S": "player"
+                    },
+                    "myposition": {
+                        "S": "forward"
+                    },
+                    "playerId": {
+                        "S": "5"
+                    },
+                    "fullname": {
+                        "S": "Luis Suarez"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "mytype": {
+                        "S": "player"
+                    },
+                    "myposition": {
+                        "S": "forward"
+                    },
+                    "playerId": {
+                        "S": "6"
+                    },
+                    "fullname": {
+                        "S": "Antoine Griezmann"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "mytype": {
+                        "S": "player"
+                    },
+                    "myposition": {
+                        "S": "midfielder"
+                    },
+                    "playerId": {
+                        "S": "7"
+                    },
+                    "fullname": {
+                        "S": "James Rodriguez"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "mytype": {
+                        "S": "player"
+                    },
+                    "myposition": {
+                        "S": "forward"
+                    },
+                    "playerId": {
+                        "S": "8"
+                    },
+                    "fullname": {
+                        "S": "Neymar"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "mytype": {
+                        "S": "player"
+                    },
+                    "myposition": {
+                        "S": "defender"
+                    },
+                    "playerId": {
+                        "S": "9"
+                    },
+                    "fullname": {
+                        "S": "Dani Alves"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "mytype": {
+                        "S": "player"
+                    },
+                    "myposition": {
+                        "S": "defender"
+                    },
+                    "playerId": {
+                        "S": "10"
+                    },
+                    "fullname": {
+                        "S": "Matthijs de Ligt"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "mytype": {
+                        "S": "player"
+                    },
+                    "myposition": {
+                        "S": "midfielder"
+                    },
+                    "playerId": {
+                        "S": "11"
+                    },
+                    "fullname": {
+                        "S": "Frenkie de Jong"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "mytype": {
+                        "S": "player"
+                    },
+                    "myposition": {
+                        "S": "defender"
+                    },
+                    "playerId": {
+                        "S": "12"
+                    },
+                    "fullname": {
+                        "S": "Virgil van Dijk"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "mytype": {
+                        "S": "player"
+                    },
+                    "myposition": {
+                        "S": "midfielder"
+                    },
+                    "playerId": {
+                        "S": "13"
+                    },
+                    "fullname": {
+                        "S": "Sergio Busquets"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "mytype": {
+                        "S": "player"
+                    },
+                    "myposition": {
+                        "S": "midfielder"
+                    },
+                    "playerId": {
+                        "S": "14"
+                    },
+                    "fullname": {
+                        "S": "Eden Hazard"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "mytype": {
+                        "S": "player"
+                    },
+                    "myposition": {
+                        "S": "midfielder"
+                    },
+                    "playerId": {
+                        "S": "15"
+                    },
+                    "fullname": {
+                        "S": "Paul Pogba"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "mytype": {
+                        "S": "player"
+                    },
+                    "myposition": {
+                        "S": "midfielder"
+                    },
+                    "playerId": {
+                        "S": "16"
+                    },
+                    "fullname": {
+                        "S": "Kevin De Bruyne"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "mytype": {
+                        "S": "player"
+                    },
+                    "myposition": {
+                        "S": "forward"
+                    },
+                    "playerId": {
+                        "S": "17"
+                    },
+                    "fullname": {
+                        "S": "Sergio Agüero"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "mytype": {
+                        "S": "player"
+                    },
+                    "myposition": {
+                        "S": "goalkeeper"
+                    },
+                    "playerId": {
+                        "S": "18"
+                    },
+                    "fullname": {
+                        "S": "Thibaut Courtois"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "mytype": {
+                        "S": "player"
+                    },
+                    "myposition": {
+                        "S": "goalkeeper"
+                    },
+                    "playerId": {
+                        "S": "19"
+                    },
+                    "fullname": {
+                        "S": "Manuel Neuer"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "mytype": {
+                        "S": "player"
+                    },
+                    "myposition": {
+                        "S": "goalkeeper"
+                    },
+                    "playerId": {
+                        "S": "20"
+                    },
+                    "fullname": {
+                        "S": "Guillermo Ochoa"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "mytype": {
+                        "S": "player"
+                    },
+                    "myposition": {
+                        "S": "goalkeeper"
+                    },
+                    "playerId": {
+                        "S": "21"
+                    },
+                    "fullname": {
+                        "S": "Hugo Lloris"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "mytype": {
+                        "S": "player"
+                    },
+                    "myposition": {
+                        "S": "goalkeeper"
+                    },
+                    "playerId": {
+                        "S": "22"
+                    },
+                    "fullname": {
+                        "S": "David de Gea"
+                    }
+                }
+            }
+        },
+        {
+            "PutRequest": {
+                "Item": {
+                    "mytype": {
+                        "S": "player"
+                    },
+                    "myposition": {
+                        "S": "goalkeeper"
+                    },
+                    "playerId": {
+                        "S": "23"
+                    },
+                    "fullname": {
+                        "S": "Esteban Andrada"
+                    }
+                }
+            }
+        }
+    ]
+}
