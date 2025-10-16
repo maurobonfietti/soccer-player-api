@@ -1,4 +1,3 @@
-version: "3.6"
 x-common-variables: &common-variables
   NODE_ENV: local
   AWS_ACCESS_KEY_ID: anykey
@@ -35,9 +34,9 @@ services:
     environment:
       SERVICES: dynamodb
     ports:
-      - "4569:4569"
+      - "4566:4566"
   setup:
-    image: mesosphere/aws-cli
+    image: amazon/aws-cli:latest
     container_name: soccer-player-api_setup
     volumes:
       - ./setup:/setup
