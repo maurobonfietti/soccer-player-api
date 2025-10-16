@@ -59,7 +59,7 @@ docker-compose up test
 | -------------------------|----------|----------|----------|----------|-------------------|
 | All files                |    91.23 |     87.5 |    97.06 |    91.12 |                   |
 |  src                     |    97.67 |       50 |      100 |    97.67 |                   |
-|   app.js                 |      100 |       50 |      100 |      100 |                 7 |
+|   app.js                 |      100 |       50 |      100 |      100 |                 6 |
 |   config.js              |    83.33 |       50 |      100 |    83.33 |                 6 |
 |   router.js              |      100 |      100 |      100 |      100 |                   |
 |  src/controllers         |     83.1 |      100 |      100 |     83.1 |                   |
@@ -75,7 +75,7 @@ docker-compose up test
 | Test Suites: 2 passed, 2 total
 | Tests:       19 passed, 19 total
 | Snapshots:   0 total
-| Time:        4.264s
+| Time:        0.807s
 | Ran all test suites.
 ```
 
