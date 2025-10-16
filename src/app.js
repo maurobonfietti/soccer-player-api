@@ -4,7 +4,7 @@ const cors = require('cors');
 const AWS = require('aws-sdk');
 const config = require('./config');
 if (config.env === 'local') {
-    AWS.config.dynamodb = {endpoint: 'http://localstack:4569'};
+    AWS.config.dynamodb = {endpoint: 'http://localstack:4566'};
 }
 const router = require('./router');
 const swaggerUI = require('swagger-ui-express');
